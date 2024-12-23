@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +9,16 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    alert("Message sent! Thank you for your message. I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      await axios.post('http://localhost:5000/submit', formData);
+      alert("Message sent! Thank you for your message. I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Error submitting form:', error.response ? error.response.data : error.message);
+      alert('Error submitting form. Please try again.');
+    }
   };
 
   const handleChange = (e) => {

@@ -1,4 +1,8 @@
 const Landingpage = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
       <div className="hero">
         <div className="hero-content">
@@ -12,7 +16,7 @@ const Landingpage = () => {
             <button className="cv-button">
               Download CV
             </button>
-            <button className="contact-button">
+            <button className="contact-button" onClick={scrollToContact}>
               Contact Me
             </button>
           </div>
