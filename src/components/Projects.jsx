@@ -24,6 +24,14 @@ const projects = [
     technologies: ["Python"],
     githubUrl: "https://github.com/Thinura-dinuth/University-Progression-Outcome-Predictor",
   },
+  {
+    title: "Real Estate Web Application",
+    description:
+        "A client-side web application that enables a user to search properties by type, price and properties.",
+    image: "https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["React", "Javascript", "HTML", "CSS"],
+    githubUrl: "https://github.com/Thinura-dinuth/Real-Estate-Web-Application",
+  },
 ];
 const Projects = () => {
   return (

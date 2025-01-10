@@ -10,7 +10,7 @@ const Landingpage = () => {
             Hi, I&apos;m <span className="accent">Thinura Jayathunga</span>
           </h1>
           <p className="hero-subtitle">
-            Full Stack Developer & UI/UX Enthusiast
+            Frontend, Backend Developer & UI/UX Enthusiast
           </p>
           <div className="hero-buttons">
             <button className="cv-button">
