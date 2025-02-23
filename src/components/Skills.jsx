@@ -1,43 +1,57 @@
-import { Code2, Layout, Server, Monitor } from "lucide-react";
-
-const skills = [
-    {
-        category: "Frontend",
-        icon: <Layout className="w-6 h-6" />,
-        items: ["React", "JavaScript", "HTML/CSS", "Bootstrap"],
-    },
-    {
-        category: "Backend",
-        icon: <Server className="w-6 h-6" />,
-        items: ["Spring Boot", "Python", "Java"],
-    },
-    {
-        category: "UI",
-        icon: <Monitor className="w-6 h-6" />,
-        items: ["Figma", "Axure RP"],
-    },
-];
-
 const Skills = () => {
+    const skills = {
+        frontend: [
+            { name: "HTML", level: 95 },
+            { name: "CSS", level: 85 },
+            { name: "JavaScript", level: 80 },
+            { name: "React", level: 85 },
+        ],
+        backend: [
+            { name: "Springboot", level: 80 },
+            { name: "Java", level: 80 },
+            { name: "Python", level: 70 },
+        ],
+        uiux: [
+            { name: "Figma", level: 80 },
+            { name: "Azure RP", level: 75 },
+            { name: "Photoshop", level: 70 },
+        ],
+    };
+
     return (
-        <section id="skills" className="skills">
-            <div className="container mx-auto px-4">
-                <h2 className="skills-title">Skills & Expertise</h2>
-                <div className="skills-grid">
-                    {skills.map((skill) => (
-                        <div key={skill.category} className="skill-card">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="skill-icon">{skill.icon}</div>
-                                <h3 className="skill-category">{skill.category}</h3>
+        <section id="skills" className="skills-section">
+            <h2 className="skills-title">Skills</h2>
+            <div className="skills-container">
+                <div className="skills-category">
+                    <h3 className="skills-category-title">Front End</h3>
+                    {skills.frontend.map((skill) => (
+                        <div key={skill.name} className="skill">
+                            <div className="skill-name">{skill.name}</div>
+                            <div className="progress-bar">
+                                <div className="progress" style={{ width: `${skill.level}%` }}></div>
                             </div>
-                            <ul className="space-y-2">
-                                {skill.items.map((item) => (
-                                    <li key={item} className="skill-item">
-                                        <Code2 className="skill-item-icon" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <div className="skills-category">
+                    <h3 className="skills-category-title">Backend</h3>
+                    {skills.backend.map((skill) => (
+                        <div key={skill.name} className="skill">
+                            <div className="skill-name">{skill.name}</div>
+                            <div className="progress-bar">
+                                <div className="progress" style={{ width: `${skill.level}%` }}></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="skills-category">
+                    <h3 className="skills-category-title">UI/UX</h3>
+                    {skills.uiux.map((skill) => (
+                        <div key={skill.name} className="skill">
+                            <div className="skill-name">{skill.name}</div>
+                            <div className="progress-bar">
+                                <div className="progress" style={{ width: `${skill.level}%` }}></div>
+                            </div>
                         </div>
                     ))}
                 </div>

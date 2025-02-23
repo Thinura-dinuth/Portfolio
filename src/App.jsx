@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Navigation from "../src/components/Navigation";
 import Landingpage from "../src/components/Landingpage";
-import About from "../src/components/About";
 import Skills from "../src/components/Skills";
 import Projects from "../src/components/Projects";
 import Contact from "../src/components/Contact";
@@ -31,9 +30,8 @@ const App = () => {
         <div className="min-h-screen">
             <Navigation />
             <Landingpage />
-            <About />
-            <Skills />
             <Projects />
+            <Skills />
             <Contact />
             <Footer />
             {showButton && (

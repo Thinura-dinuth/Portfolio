@@ -5,9 +5,9 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Home", href: "#home" },
     { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" },
   ];
 
