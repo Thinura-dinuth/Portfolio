@@ -12,27 +12,34 @@ const Navigation = () => {
   ];
 
   return (
-      <nav className="nav">
-        <div className="nav-container">
-          <a href="#" className="nav-brand">Portfolio</a>
-          <button className="nav-menu" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X /> : <Menu />}
-          </button>
+    <nav className="nav">
+      <div className="nav-container">
+        <a href="#" className="nav-brand">
+          <span className="nav-brand-text">Portfolio</span>
+        </a>
 
-          <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-            {menuItems.map((item) => (
-                <a
-                    key={item.label}
-                    href={item.href}
-                    className="nav-link"
-                    onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-            ))}
-          </div>
+        <button
+          className="nav-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <div className={`nav-links ${isOpen ? "nav-open" : ""}`}>
+          {menuItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="nav-link"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-      </nav>
+      </div>
+    </nav>
   );
 };
 

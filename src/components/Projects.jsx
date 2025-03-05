@@ -3,28 +3,34 @@ import { Github } from "lucide-react";
 const projects = [
   {
     title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform built with React and Node.js",
+    description:
+      "A full-featured e-commerce platform built with React and Node.js",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
     technologies: ["HTML", "CSS", "Javascript"],
     githubUrl: "https://github.com/Thinura-dinuth/E-Commerce-Page",
   },
   {
     title: "Plane Ticket Management App",
-    description: "A collaborative ticket management check and reserve a plane ticket",
+    description:
+      "A collaborative ticket management check and reserve a plane ticket",
     image: "https://plus.unsplash.com/premium_photo-1684407617579-e94c51a5a545",
     technologies: ["Java"],
-    githubUrl: "https://github.com/Thinura-dinuth/Plane-Ticket-Management-System",
+    githubUrl:
+      "https://github.com/Thinura-dinuth/Plane-Ticket-Management-System",
   },
   {
     title: "University Progression Predictor",
-    description: "A program to predict progression outcomes at the end of each academic year.",
+    description:
+      "A program to predict progression outcomes at the end of each academic year.",
     image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
     technologies: ["Python"],
-    githubUrl: "https://github.com/Thinura-dinuth/University-Progression-Outcome-Predictor",
+    githubUrl:
+      "https://github.com/Thinura-dinuth/University-Progression-Outcome-Predictor",
   },
   {
     title: "Real Estate Web Application",
-    description: "A client-side web application that enables users to search properties.",
+    description:
+      "A client-side web application that enables users to search properties.",
     image: "https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6",
     technologies: ["React", "Javascript", "HTML", "CSS"],
     githubUrl: "https://github.com/Thinura-dinuth/Real-Estate-Web-Application",
