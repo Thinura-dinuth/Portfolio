@@ -8,16 +8,31 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
     try {
-      await axios.post('http://localhost:5000/submit', formData);
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwbS0ZX8Obye0_0uijxqH-8c2N41GmMco5rtepeb4IM5IVQp_EjR8KMzj6GLLAYWlcgSQ/exec', {
+        method: 'POST',
+        mode: 'no-cors', // Important!
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      // Since we're using no-cors, we can't access the response
+      // So we'll just assume it worked if no error was thrown
       alert("Message sent! Thank you for your message. I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error('Error submitting form:', error.response ? error.response.data : error.message);
+      console.error('Error submitting form:', error);
       alert('Error submitting form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -93,9 +108,13 @@ const Contact = () => {
                   className="form-textarea"
               ></textarea>
               </div>
-              <button type="submit" className="submit-button">
-                Send Message
-              </button>
+              <button 
+    type="submit" 
+    className="submit-button" 
+    disabled={isSubmitting}
+  >
+    {isSubmitting ? 'Sending...' : 'Send Message'}
+  </button>
             </form>
           </div>
         </div>
