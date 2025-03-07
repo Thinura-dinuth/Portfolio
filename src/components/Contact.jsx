@@ -8,28 +8,29 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
     try {
-      const response = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      // Replace this URL with your actual Google Apps Script web app URL
+      const response = await fetch("https://script.google.com/macros/s/AKfycbykp4SMnmrwyPofU1bKtHrJ49M09GjlaL0mFlB-_fMyFumkO-w0KQ8TyCpyXzXRJQnVIg/exec", {
         method: "POST",
-        mode: "no-cors",
+        mode: "no-cors", // This is necessary for CORS restrictions
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
-      alert(
-        "Message sent! Thank you for your message. I'll get back to you soon."
-      );
+      setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error submitting form. Please try again.");
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -112,8 +113,19 @@ const Contact = () => {
               className="submit-button"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? "Sending..." : "Send Message"}            
             </button>
+            {submitStatus === "success" && (
+              <div className="form-message success">
+                Message sent! Thank you for your message. I'll get back to you soon.
+              </div>
+            )}
+            
+            {submitStatus === "error" && (
+              <div className="form-message error">
+                Error submitting form. Please try again or contact me directly via email.
+              </div>
+            )}
           </form>
         </div>
       </div>
