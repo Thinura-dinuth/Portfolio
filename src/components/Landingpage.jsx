@@ -126,8 +126,9 @@ const Landingpage = () => {
               margin: "2rem auto",
             }}
           >
-            I build cutting-edge web applications with a focus on AI integration
-            and cloud solutions. Let's create something amazing together.
+             A passionate developer crafting seamless and efficient solutions.
+             Explore my work, skills, and projects that bring ideas to life. 
+             Let’s build something amazing together!
           </p>
           <div
             style={{
@@ -172,7 +173,7 @@ const Landingpage = () => {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/thinu-jaya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/thinu-jaya/"
               target="_blank"
               rel="noopener noreferrer"
               style={iconButtonStyle}
