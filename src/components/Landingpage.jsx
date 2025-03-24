@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Landingpage = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const texts = ["Frontend Developer", "Backend Developer", "UI/UX Designer"];
+  const texts = ["Frontend Developer", "Backend Developer", "UI/UX Designer", ];
 
   // Custom typing effect without typed.js
   useEffect(() => {

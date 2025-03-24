@@ -2,9 +2,25 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
+    title: "LegalXLK",
+    description:
+        "AI powered legal platform for lawyers to make their daily task easier.",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["React", "Springboot", "Firebase", "Figma", "Google Cloud"],
+    githubUrl: "https://legalxlk.com",
+  },
+  {
+    title: "Realtime Ticketing Simulation",
+    description:
+        "A simulation of a ticketing system between vendors and customers",
+    image: "https://plus.unsplash.com/premium_photo-1718674394245-9f270c5fd2b3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Java","React", "Springboot"],
+    githubUrl: "https://github.com/Thinura-dinuth/E-Commerce-Page",
+  },
+  {
     title: "E-commerce Platform",
     description:
-      "A full-featured e-commerce platform built with React and Node.js",
+      "A full-featured e-commerce platform built with HTML, CSS and JavaScript.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
     technologies: ["HTML", "CSS", "Javascript"],
     githubUrl: "https://github.com/Thinura-dinuth/E-Commerce-Page",
@@ -71,7 +87,7 @@ const Projects = () => {
                     className="project-link"
                   >
                     <Github className="project-icon" />
-                    <span>View Code</span>
+                    <span>View</span>
                   </a>
                 </div>
               </div>
